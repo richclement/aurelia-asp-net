@@ -1,0 +1,27 @@
+<template>
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+
+    <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label for="fn">Value</label>
+        <input type="text" value.bind="newValue" class="form-control" id="fn" placeholder="new integer value">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
+
+  <section class="au-animate">
+      <h2>${heading}</h2>
+      <div class="row au-stagger">
+        <div class="col-sm-6 col-md-3 card-container au-animate" repeat.for="value of values">
+            <div class="card">
+                <div class="content">
+                    <p class="name">${value}</p>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+</template>
